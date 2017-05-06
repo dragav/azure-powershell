@@ -12,15 +12,16 @@ Backs up a key in a key vault.
 
 ## SYNTAX
 
-### ByKeyName
+### ByKeyName (Default)
 ```
-Backup-AzureKeyVaultKey [-VaultName] <String> [-Name] <String> [[-OutputFile] <String>] [-WhatIf] [-Confirm]
- [<CommonParameters>]
+Backup-AzureKeyVaultKey [-VaultName] <String> [-Name] <String> [[-OutputFile] <String>] [-Force] [-WhatIf]
+ [-Confirm] [<CommonParameters>]
 ```
 
 ### ByKey
 ```
-Backup-AzureKeyVaultKey -Key <KeyBundle> [[-OutputFile] <String>] [-WhatIf] [-Confirm] [<CommonParameters>]
+Backup-AzureKeyVaultKey -Key <KeyBundle> [[-OutputFile] <String>] [-Force] [-WhatIf] [-Confirm]
+ [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -62,6 +63,19 @@ This command creates a backup of the key named $key.Name in the vault named $key
 
 ## PARAMETERS
 
+### -Force
+Overwrite the given file if it exists```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases: 
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: True (ByPropertyName)
+Accept wildcard characters: False
+```
+
 ### -Key
 Specifies a previously retrieved key which is to be backed up.
 
@@ -86,7 +100,7 @@ Parameter Sets: ByKeyName
 Aliases: KeyName
 
 Required: True
-Position: 1
+Position: 2
 Default value: None
 Accept pipeline input: True (ByPropertyName)
 Accept wildcard characters: False
@@ -103,7 +117,7 @@ Parameter Sets: (All)
 Aliases: 
 
 Required: False
-Position: 2
+Position: 3
 Default value: None
 Accept pipeline input: True (ByPropertyName)
 Accept wildcard characters: False
@@ -118,7 +132,7 @@ Parameter Sets: ByKeyName
 Aliases: 
 
 Required: True
-Position: 0
+Position: 1
 Default value: None
 Accept pipeline input: True (ByPropertyName)
 Accept wildcard characters: False

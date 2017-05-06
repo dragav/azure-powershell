@@ -12,7 +12,7 @@ Backs up a secret in a key vault.
 
 ## SYNTAX
 
-### BySecretName
+### BySecretName (Default)
 ```
 Backup-AzureKeyVaultSecret [-VaultName] <String> [-Name] <String> [[-OutputFile] <String>] [-Force] [-WhatIf]
  [-Confirm] [<CommonParameters>]
